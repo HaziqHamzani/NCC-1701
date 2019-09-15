@@ -1,0 +1,18 @@
+@media screen and (max-width: 1200px) and (min-width: 400px) {
+    #homepage {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 300px 1fr 250px 250px 1fr 250px 250px;
+        grid-template-areas:    "slider slider"
+                                "studio-info studio-info"
+                                "studio-pic1 studio-pic2"
+                                "studio-pic3 studio-pic3"
+                                "class-info class-info"
+                                "class-pic1 class-pic2"
+                                "class-pic3 class-pic3";
+    }
+
+    #footer {
+        text-align: center;
+    }
+}
