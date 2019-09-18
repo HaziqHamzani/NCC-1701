@@ -39,7 +39,7 @@
 
         <div class="nav-container">
             <nav class="nav-checkbox">
-                <a href="#" id="logo"><h2>MNT Gym Studio</h2></a>
+                <a href="index.php" id="logo"><h2>MNT Gym Studio</h2></a>
                 <input id="tab-nav" type="checkbox" class="tab-nav">
                 <label for="tab-nav" class="tab-nav-label">Menu</label>
                 <ul class="tab-content">
