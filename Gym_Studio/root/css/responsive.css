@@ -33,4 +33,15 @@
     .nav-checkbox input:checked ~ .tab-content {
         max-height: 400px;
     }
+
+    #trainers-page {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #trainers-table {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

@@ -113,6 +113,7 @@ h1 {
 /*=================================
         HOMEPAGE
 ===================================*/
+
 #homepage {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -176,6 +177,7 @@ h1 {
 /*=================================
         REGISTER TRAINER
 ===================================*/
+
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
@@ -190,6 +192,27 @@ input[type=text] {
 
 #trainers-form {
     padding-left: 50px;
+}
+
+
+/*=================================
+            TRAINER
+===================================*/
+
+#trainers-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px 30px 30px 30px;
+    grid-gap: 20px;
+}
+
+.trainer-img {
+    height: 200px;
+    width: 200px;
+}
+
+#trainers-table {
+    text-align: left;
 }
 
 

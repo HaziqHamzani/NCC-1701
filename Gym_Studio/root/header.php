@@ -44,7 +44,7 @@
                 <label for="tab-nav" class="tab-nav-label">Menu</label>
                 <ul class="tab-content">
                     <li><a href="">CLASSES</a></li>
-                    <li><a href="">TRAINER</a></li>
+                    <li><a href="trainers.php">TRAINER</a></li>
                     <li><a href="">GALLERY</a></li>
                     <li><a href="">LOGIN</a></li>
                     <li><a href="">SIGNUP</a></li>
