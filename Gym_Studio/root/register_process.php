@@ -11,6 +11,7 @@
     $age = $_POST["age"];
     $specialty = $_POST["specialty"];
     $image = $_FILES["image"]["name"];
+    $insertOk = 1;
 
     $target_dir = "img/uploads/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
@@ -20,6 +21,18 @@
 
     if(isset($_POST['submit']))
     {
+        $check_nickname = "SELECT nickname FROM trainer WHERE nickname = '$nickname'";
+        $result1 = $conn -> query($check_nickname);
+        $num_of_result = $result1 -> num_rows;
+
+        if ($num_of_result > 0)
+        {
+            echo "nickname is taken, try another name";
+            echo "<br>";
+            $insertOk = 0;
+        }
+
+
         $check = getimagesize($_FILES["image"]["tmp_name"]);
         if($check !== false)
         {
@@ -49,7 +62,7 @@
         }
     }
 
-    if ($uploadOk == 0)
+    if ($uploadOk == 0 and $insertOk == 0)
     {
         echo "Sorry, your file was not uploaded.";
         echo "<br>";

@@ -1,6 +1,11 @@
 <?php
     include_once 'header.php';
     include_once 'dbconnect.php';
+
+    if (!$_SESSION['user'])
+    {
+        header("Location: login-form.php");
+    }
 ?>
 
 <div id="trainers-form">

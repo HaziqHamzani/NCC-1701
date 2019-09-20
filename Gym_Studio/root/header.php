@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -24,31 +28,41 @@
     </head>
 
     <body>
-        <!--<div id="navbar">
-            <div id="logo">
-                <h2>MNT Gym Studio</h2>
-            </div>
-            <div id="links">
-                <a href="">CLASSES</a>
-                <a href="">TRAINERS</a>
-                <a href="">GALLERY</a>
-                <a href="">LOGIN</a>
-                <a href="">SIGNUP</a>
-            </div>
-        </div>-->
 
-        <div class="nav-container">
-            <nav class="nav-checkbox">
-                <a href="index.php" id="logo"><h2>MNT Gym Studio</h2></a>
-                <input id="tab-nav" type="checkbox" class="tab-nav">
-                <label for="tab-nav" class="tab-nav-label">Menu</label>
-                <ul class="tab-content">
-                    <li><a href="">CLASSES</a></li>
-                    <li><a href="trainers.php">TRAINER</a></li>
-                    <li><a href="">GALLERY</a></li>
-                    <li><a href="">LOGIN</a></li>
-                    <li><a href="">SIGNUP</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <div class="logo">
+                <a href="index.php"><h2>MNT Gym</h2></a>
+            </div>
+            <ul class="nav-links">
+                <?php
+                        if(isset($_SESSION['user']))
+                        {
+                    ?>
+                            <li><a>Welcome <?php echo $_SESSION['user'] ?></a></li>
+                            <li><a href="trainers-form.php">CREATE TRAINER</a></li>
+                            <li><a href="">CLASSES</a></li>
+                            <li><a href="trainers.php">TRAINER</a></li>
+                            <li><a href="">GALLERY</a></li>
+                            <li><a><form action="logout.php" method="post">
+                                <button type="submit" name="submit">LOGOUT</button></form></a></li>
+                    <?php
+                        }
+                        else
+                        {
+                    ?>
+                            <li><a href="">CLASSES</a></li>
+                            <li><a href="trainers.php">TRAINER</a></li>
+                            <li><a href="">GALLERY</a></li>
+                            <li><a href="login-form.php">LOGIN</a></li>
+                            <li><a href="">SIGNUP</a></li>
+                    <?php
+                        }
+                    ?>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
 
