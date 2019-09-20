@@ -16,7 +16,7 @@
         text-align: center;
     }
 
-    .tab-nav-label {
+    /*.tab-nav-label {
         display: grid;
         grid-column: 3;
     }
@@ -32,5 +32,48 @@
 
     .nav-checkbox input:checked ~ .tab-content {
         max-height: 400px;
+    }*/
+
+    #trainers-page {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
     }
+
+    #trainers-table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #login-table {
+        width: auto;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #DFF8EB;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 1s ease-in;
+    }
+
+    nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+
 }
